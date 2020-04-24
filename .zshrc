@@ -107,6 +107,13 @@ source $ZSH/oh-my-zsh.sh
 # my aliases
 
 # shortcuts for simple terminal system management
+
+
+alias insto="sudo apt-get install"
+alias instp="sudo dpkg -i"
+alias totup="sudo apt-get -y update; sudo apt-get -y upgrade; sudo apt-get install -y -f; sudo apt autoremove -y"
+alias dep="sudo apt-get install -f"
+
 alias op="xdg-open"
 alias temp="cat /sys/class/thermal/thermal_zone*/temp"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
