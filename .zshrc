@@ -1,14 +1,20 @@
+autoload -Uz promptinit
+promptinit
+
+PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
+RPROMPT='[%F{yellow}%?%f]'
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="/home/b1z0n/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="typewritten"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,12 +74,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  colored-man-pages
-  web-search
-  rand-quote
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,12 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
+#
 # my aliases
 
 # shortcuts for simple terminal system management
@@ -124,6 +123,27 @@ brigh () {
     sudo -- sh -c "echo $res > /sys/class/backlight/intel_backlight/brightness"
   fi
 }
+killp () {
+  if [ -z $1 ]; then
+    printf "Pass it the name of process to kill\n"
+    return 1
+  fi
+
+  cnt=$(ps -aux | grep "$1" | wc -l)
+  if [ $cnt -eq 1 ]; then 
+    printf "Already dead\n"
+    return 0
+  fi
+
+  pid=$(ps -aux | grep "$1" | awk 'NR==1{print $2}')
+  name=$(ps -aux | grep "$1" | awk 'NR==1{print $11}')
+
+  printf "%s\nY or n: " "$name"
+  read is_kill
+  if [ -z "$is_kill" ] || [ "$is_kill" = "y" ] || [ "$is_kill" = "Y" ]; then
+    sudo kill -9 "$pid"
+  fi
+}
 
 snow () {
   ruby -e 'C=`stty size`.scan(/\d+/)[1].to_i;S=["2743".to_i(16)].pack("U*");a={};puts "\033[2J";loop{a[rand(C)]=0;a.each{|x,o|;a[x]+=1;print "\033[#{o};#{x}H \033[#{a[x]};#{x}H#{S} \033[0;0H"};$stdout.flush;sleep 0.1}'
@@ -131,3 +151,10 @@ snow () {
 
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+function cs () {
+    if [ -z "$1" ]; then
+        clear && ls
+    else
+        clear && cd "$@" && ls
+    fi
+}
