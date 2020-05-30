@@ -116,25 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-function setzoom() { 
-	gsettings set org.gnome.desktop.interface text-scaling-factor "$@"; 
-}
-
-alias insto="sudo apt-get install"
-alias instp="sudo dpkg -i"
-alias totup="sudo apt-get -y update; sudo apt-get -y upgrade; sudo apt-get install -y -f; sudo apt autoremove -y"
-alias dep="sudo apt-get install -f"
-
-alias op="xdg-open"
-alias temp="cat /sys/class/thermal/thermal_zone*/temp"
-alias wowtf="echo '(╯°□°)╯︵ ┻━┻'"
-snow () {
-ruby -e 'C=`stty size`.scan(/\d+/)[1].to_i;S=["2743".to_i(16)].pack("U*");a={};puts "\033[2J";loop{a[rand(C)]=0;a.each{|x,o|;a[x]+=1;print "\033[#{o};#{x}H \033[#{a[x]};#{x}H#{S} \033[0;0H"};$stdout.flush;sleep 0.1}'
-}
-
-PATH=$PATH":~/Programs/pycharm-community-2019.1.3/bin"
 export PS1="\e[0;31m[\u@\h \W]\$ \e[m "
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-export PATH=$PATH:/home/b1zon/Downloads/gradle-5.6.2/bin
+
+source .common.sh
+
