@@ -79,4 +79,3 @@ alias tgtrash="telegram-desktop -workdir /home/b1z0n/.local/share/TelegramDeskto
 
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
