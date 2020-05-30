@@ -40,6 +40,28 @@ function setzoom() {
 ##################################################
 # Commodities
 ##################################################
+ 
+ killp () {
+  if [ -z $1 ]; then
+    printf "Pass it the name of process to kill\n"
+    return 1
+  fi
+
+  cnt=$(ps -aux | grep "$1" | wc -l)
+  if [ $cnt -eq 1 ]; then 
+    printf "Already dead\n"
+    return 0
+  fi
+
+  pid=$(ps -aux | grep "$1" | awk 'NR==1{print $2}')
+  name=$(ps -aux | grep "$1" | awk 'NR==1{print $11}')
+
+  printf "%s\nY or n: " "$name"
+  read is_kill
+  if [ -z "$is_kill" ] || [ "$is_kill" = "y" ] || [ "$is_kill" = "Y" ]; then
+    sudo kill -9 "$pid"
+  fi
+} 
 
 alias wowtf="echo '(╯°□°)╯︵ ┻━┻'"
 
@@ -50,8 +72,6 @@ cs() {
         clear && cd $1 && ls
     fi
 }
-
-
 
 # shortcuts for simple terminal system management
 alias tgmain="telegram-desktop -workdir /home/b1z0n/.local/share/TelegramDesktop/main -- %u"
