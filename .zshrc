@@ -106,4 +106,4 @@ source $ZSH/oh-my-zsh.sh
 #
 # my aliases
 
-source .common.sh
+source ~/.common.sh
