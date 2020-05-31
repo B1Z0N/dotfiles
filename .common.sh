@@ -7,11 +7,8 @@
 # Packaging
 ##################################################
 
-alias insto="sudo apt-get install"
-alias instp="sudo dpkg -i"
-alias totup="sudo apt-get -y update; sudo apt-get -y upgrade; sudo apt-get install -y -f; sudo apt autoremove -y; sudo apt upgrade"
-alias dep="sudo apt-get install -f"
-
+alias insto="yay -S"
+alias totup="yay -Syu"
 
 ##################################################
 # System shortcuts
@@ -24,17 +21,13 @@ alias batt="cat /sys/class/power_supply/BAT0/capacity"
 brigh () {
   cur=$(cat /sys/class/backlight/intel_backlight/brightness)
   if [ "$#" -eq 0 ]; then
-	  integer res=$((rint($(echo "($cur / $max) * 100" | bc -l))))
+	integer res=$((rint($(echo "($cur / $max) * 100" | bc -l))))
     echo $res
   else
     max=$(cat /sys/class/backlight/intel_backlight/max_brightness)
     integer res=$((rint($(echo "($max / 100) * $1" | bc -l))))
     sudo -- sh -c "echo $res > /sys/class/backlight/intel_backlight/brightness"
   fi
-}
-
-function setzoom() { 
-	gsettings set org.gnome.desktop.interface text-scaling-factor "$@"; 
 }
 
 ##################################################
