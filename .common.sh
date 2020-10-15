@@ -72,3 +72,11 @@ alias tgtrash="telegram-desktop -workdir /home/b1z0n/.local/share/TelegramDeskto
 
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# generate full windows path from current linux path
+alias winpath='printf "C:\msys64%s\n" $(pwd | sed "s/\\//\\\\/g")'
+# generate full linux path from full path
+
+linpath() { 
+    echo "$1" | sed 's/C:/\/c/g' | sed 's/\\/\//g' 
+}
