@@ -4,16 +4,6 @@
 # (not a script)
 
 ##################################################
-# Packaging
-##################################################
-
-alias insto="sudo apt-get install"
-alias instp="sudo dpkg -i"
-alias totup="sudo apt-get -y update; sudo apt-get -y upgrade; sudo apt-get install -y -f; sudo apt autoremove -y; sudo apt upgrade"
-alias dep="sudo apt-get install -f"
-
-
-##################################################
 # System shortcuts
 ##################################################
 
@@ -23,13 +13,13 @@ alias batt="cat /sys/class/power_supply/BAT0/capacity"
 
 brigh () {
   cur=$(cat /sys/class/backlight/intel_backlight/brightness)
+  max=$(cat /sys/class/backlight/intel_backlight/max_brightness)
   if [ "$#" -eq 0 ]; then
-	  integer res=$((rint($(echo "($cur / $max) * 100" | bc -l))))
-    echo $res
+    res=$(echo "($cur / $max) * 100" | bc -l)
+    echo $res | awk '{print int($1)}'
   else
-    max=$(cat /sys/class/backlight/intel_backlight/max_brightness)
-    integer res=$((rint($(echo "($max / 100) * $1" | bc -l))))
-    sudo -- sh -c "echo $res > /sys/class/backlight/intel_backlight/brightness"
+    res=$(echo "($max / 100) * $1" | bc -l | awk '{print int($1)}')
+    sudo sh -c "echo $res > /sys/class/backlight/intel_backlight/brightness"
   fi
 }
 
@@ -72,10 +62,6 @@ cs() {
         clear && cd $1 && ls
     fi
 }
-
-# shortcuts for simple terminal system management
-alias tgmain="telegram-desktop -workdir /home/b1z0n/.local/share/TelegramDesktop/main -- %u"
-alias tgtrash="telegram-desktop -workdir /home/b1z0n/.local/share/TelegramDesktop/trash -- %u"
 
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
