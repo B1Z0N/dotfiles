@@ -66,3 +66,5 @@ cs() {
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# to enable vim mode
+set -o vi
