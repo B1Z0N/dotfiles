@@ -27,7 +27,7 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
 {2fdc0328-1b1c-4245-a149-ce675f6129e7}=Ctrl+Alt+1,none,New Action
-{75ce4ce5-721c-432d-9ce9-58c71754adfa}=Esc,none,Launch Konsole
+{75ce4ce5-721c-432d-9ce9-58c71754adfa}=none,none,Launch Konsole
 {86bc6c0c-ec32-417e-972f-61beda0c1457}=Ctrl+Alt+T,none,Alacritty
 {c4f29752-22ae-40a6-8dfc-c033e2a2e28f}=Ctrl+Shift+Print,none,CutScreentshotToClipboard
 {c6c66c1d-5adc-479e-86af-bf1e01182663}=Ctrl+Print,none,ScreenshotToClipboard

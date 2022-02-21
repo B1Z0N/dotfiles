@@ -198,7 +198,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_2Triggers0]
-Key=Esc
+Key=
 Type=SHORTCUT
 Uuid={75ce4ce5-721c-432d-9ce9-58c71754adfa}
 
