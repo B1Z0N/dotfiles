@@ -120,3 +120,7 @@ export PS1="\e[0;31m[\u@\h \W]\$ \e[m "
 
 source .common.sh
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

@@ -64,8 +64,17 @@ cs() {
     fi
 }
 
+zs() {
+    if [ -z "$1" ]; then 
+        clear && ls
+    else
+        clear && z $1 && ls
+    fi
+}
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # to enable vim mode
 set -o vi
+
+export PATH="/home/b1z0n/.local/bin:$PATH"
