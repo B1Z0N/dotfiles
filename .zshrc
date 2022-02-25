@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # my aliases
 
 # shortcuts for simple terminal system management
-source .common.sh
+source ~/.common.sh
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
