@@ -12,6 +12,11 @@ alias op="xdg-open"
 alias temp="cat /sys/class/thermal/thermal_zone*/temp"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
 
+alias insto="sudo apt-get install"
+alias instp="sudo dpkg -i"
+alias totup="sudo apt-get -y update; sudo apt-get -y upgrade; sudo apt-get install -y -f; sudo apt autoremove -y; sudo apt upgrade"
+alias dep="sudo apt-get install -f"
+
 brigh () {
   cur=$(cat /sys/class/backlight/intel_backlight/brightness)
   max=$(cat /sys/class/backlight/intel_backlight/max_brightness)
@@ -64,13 +69,6 @@ cs() {
     fi
 }
 
-zs() {
-    if [ -z "$1" ]; then 
-        clear && ls
-    else
-        clear && z $1 && ls
-    fi
-}
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
