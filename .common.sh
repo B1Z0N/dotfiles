@@ -75,4 +75,4 @@ alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # to enable vim mode
 set -o vi
 
-export PATH="/home/b1z0n/.local/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
