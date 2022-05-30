@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+(cd ~/Downloads/ && java -jar TLauncher.jar &> /dev/null &)
