@@ -3,6 +3,7 @@ _k_friendly_name=Activity Manager
 switch-to-activity-9e514cf7-a86e-49ef-a127-d09c31df9606=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
+Switch keyboard layout to Chinese=none,none,Switch keyboard layout to Chinese
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Russian=none,none,Switch keyboard layout to Russian
 Switch keyboard layout to Ukrainian=none,none,Switch keyboard layout to Ukrainian
@@ -27,7 +28,7 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
 {2fdc0328-1b1c-4245-a149-ce675f6129e7}=Ctrl+Alt+1,none,New Action
-{75ce4ce5-721c-432d-9ce9-58c71754adfa}=none,none,Launch Konsole
+{3922b7ca-94c7-42e8-a332-98a12ffce258}=Ctrl+Alt+2,none,op elixir
 {86bc6c0c-ec32-417e-972f-61beda0c1457}=Ctrl+Alt+T,none,Alacritty
 {c4f29752-22ae-40a6-8dfc-c033e2a2e28f}=Ctrl+Shift+Print,none,CutScreentshotToClipboard
 {c6c66c1d-5adc-479e-86af-bf1e01182663}=Ctrl+Print,none,ScreenshotToClipboard
@@ -242,6 +243,12 @@ stopmedia=Media Stop,Media Stop,Stop media playback
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
 _launch=Meta+E,Meta+E,Dolphin
+
+[org.kde.konsole.desktop]
+NewTab=none,none,Open a New Tab
+NewWindow=none,none,Open a New Window
+_k_friendly_name=Konsole
+_launch=none,none,Konsole
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents

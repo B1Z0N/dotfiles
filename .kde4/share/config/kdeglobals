@@ -133,11 +133,11 @@ ForegroundVisited=155,89,182
 [General]
 ColorScheme=BreezeDark
 Name=Breeze Dark
-font=Hack,10,-1,5,50,0,0,0,0,0
-menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
+font=WenQuanYi WenQuanYi Bitmap Song,7,-1,5,50,0,0,0,0,0
+menuFont=WenQuanYi WenQuanYi Bitmap Song,7,-1,5,50,0,0,0,0,0
 shadeSortColumn=true
-smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0
-toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=WenQuanYi WenQuanYi Bitmap Song,7,-1,5,50,0,0,0,0,0
+toolBarFont=WenQuanYi WenQuanYi Bitmap Song,7,-1,5,50,0,0,0,0,0
 widgetStyle=Breeze
 
 [Icons]

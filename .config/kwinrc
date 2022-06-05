@@ -4,6 +4,7 @@ update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-
 [Compositing]
 Enabled=false
 GLTextureFilter=1
+OpenGLIsUnsafe=false
 
 [Desktops]
 Id_1=aa23fa44-ff0e-4d00-ae76-4e566cfb607a
@@ -11,10 +12,11 @@ Number=1
 Rows=1
 
 [NightColor]
-LatitudeAuto=50.458
-LongitudeAuto=30.5303
+Active=true
+LatitudeAuto=48.3415
+LongitudeAuto=29.8658
 Mode=Constant
-NightTemperature=3000
+NightTemperature=3400
 
 [Plugins]
 blurEnabled=true
@@ -33,7 +35,6 @@ maximizeSoleTile=true
 ActivitiesMode=0
 DesktopMode=0
 HighlightWindows=false
-LayoutName=thumbnail_grid
 
 [Windows]
 ElectricBorderDelay=0

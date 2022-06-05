@@ -137,14 +137,9 @@ ForegroundVisited=155,89,182
 
 [General]
 BrowserApplication=google-chrome.desktop
-ColorSchemeHash=9163139877916089673a361083a2231d380293d7
+ColorSchemeHash=d0b3d2da363261958945ede41bfed4e1744dd286
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=Hack,10,-1,5,50,0,0,0,0,0
-font=Hack,10,-1,5,50,0,0,0,0,0
-menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
-smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0
-toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
@@ -171,7 +166,6 @@ View Style=DetailTree
 [WM]
 activeBackground=49,54,59
 activeBlend=252,252,252
-activeFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 activeForeground=252,252,252
 inactiveBackground=42,46,50
 inactiveBlend=161,169,177

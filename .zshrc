@@ -112,3 +112,5 @@ source ~/.common.sh
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+alias grep="echo 'Use ripgrep instead!'"
+alias find="echo 'Use fzf instead!'"
