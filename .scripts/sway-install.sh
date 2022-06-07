@@ -95,6 +95,25 @@ sudo apt install mako-notifier
 # blurred lock screen
 sudo apt install ffmpeg
 
+# install redshift(night color)
+cd ~/sway-build
+sudo apt install autopoint autoconf intltool libtool  
+git clone -b wayland https://github.com/minus7/redshift.git  
+cd redshift  
+./bootstrap
+./configure
+make  
+sudo make install  
+
+# install wl-clipboard
+sudo apt install wl-clipboard
+
+# install dolphin file browser(wayland native and nautilus is lagging)
+sudo apt install dolphin
+# hack to get it working
+sudo mv /usr/bin/nautilus /usr/bin/nautilus_actual
+sudo ln -s /usr/bin/dolphin /usr/bin/nautilus
+
 # TODO
 sleep on lid close
 volume
@@ -103,3 +122,4 @@ multiscreen
 bluetooth
 wifi
 redshift
+

@@ -4,6 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+set $scripts ~/.config/sway/scripts
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -217,10 +218,11 @@ xwayland enable
 bindsym $mod+shift+q exec ~/.config/sway/scripts/create_lock_image && swaylock -f -i /tmp/sway_lock_image.png
 # touchapd 
 input "2:7:SynPS/2_Synaptics_TouchPad" {
-   dwt enabled
-   tap enabled
-   natural_scroll enabled # first set this: https://askubuntu.com/questions/1122513/how-to-add-natural-inverted-mouse-scrolling-in-i3-window-manager
-   middle_emulation enabled
+  dwt enabled
+  tap enabled
+  natural_scroll enabled # first set this: https://askubuntu.com/questions/1122513/how-to-add-natural-inverted-mouse-scrolling-in-i3-window-manager
+  middle_emulation enabled
+  pointer_accel 0.6
 }
 # layouts
 input type:keyboard {
@@ -239,3 +241,12 @@ bindsym {
 }
 # notifications
 exec mako
+# night light
+exec redshift -m wayland
+# audio buttons
+bindsym {
+  XF86AudioRaiseVolume exec "amixer set Speaker,0 5+ unmute -q"
+  XF86AudioLowerVolume exec "amixer set Speaker,0 5- unmute -q"
+  XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
+  XF86AudioMicMute exec "amixer set Capture toggle -q"
+}

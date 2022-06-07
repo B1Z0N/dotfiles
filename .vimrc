@@ -24,3 +24,4 @@ nnoremap k gk
 highlight Pmenu ctermbg=gray guibg=gray
 syntax on 
 colorscheme desert
+
