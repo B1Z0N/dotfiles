@@ -1,3 +1,6 @@
+# Path
+$env:Path += ";C:\Program Files\Git\bin"
+
 # Functions
 function cs {
   param(
@@ -21,7 +24,7 @@ function Notify-Job {
         [scriptblock]$Continuation
     )
 
-    $Name = $Name ? $Name : $Job.ToString().Trim()
+    $Name = If ($Name) { $Name } Else { $Job.ToString().Trim() }
     
     if (!$Continuation) {
         $Continuation = [scriptblock]::Create("Write-Host `"Job '${Name}' completed`"; Unregister-Event `$Event")
@@ -81,11 +84,5 @@ function Notify-Job {
     #>
 }
 
-# Theming
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme tonybaloney
-
 # Set location
 set-location $env:shome
-clear-host

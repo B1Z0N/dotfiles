@@ -1,16 +1,11 @@
-syntax on 
-colorscheme desert
-
 " 4 spaces per tab
-set tabstop=4
+set tabstop=2
 " tabs to spaces
 set expandtab
 
 " useful things
 set number
 set showcmd
-set cursorline
-filetype indent on
 set wildmenu
 set lazyredraw
 set showmatch
@@ -24,3 +19,10 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 
+" colors
+highlight Pmenu ctermbg=gray guibg=gray
+syntax on 
+colorscheme desert
+
+" windows thing
+set belloff=all
