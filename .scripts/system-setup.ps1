@@ -13,6 +13,9 @@ choco install ripgrep
 # install git
 choco install git
 
+#install tldr
+choco install tldr
+
 # allow running scripts like ps1
 Set-ExecutionPolicy RemoteSigned
 

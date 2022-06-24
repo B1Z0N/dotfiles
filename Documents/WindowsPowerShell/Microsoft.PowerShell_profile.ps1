@@ -1,5 +1,14 @@
-# Path
+Clear-Host
+
+### Path
+# git
 $env:Path += ";C:\Program Files\Git\bin"
+# msbuild
+$env:Path += ";C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin"
+# dotnet cli
+$env:Path += ";C:\Program Files\Microsoft Visual Studio\2022\Community\dotnet\runtime"
+# java
+$env:Path += ";C:\Program Files\Java\jdk-11.0.15.1\bin"
 
 # Functions
 function cs {
@@ -83,3 +92,4 @@ function Notify-Job {
         Start-Job
     #>
 }
+
