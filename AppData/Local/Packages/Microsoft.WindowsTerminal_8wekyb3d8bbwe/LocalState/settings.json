@@ -6,22 +6,10 @@
         {
             "command": 
             {
-                "action": "swapPane",
-                "direction": "down"
+                "action": "splitPane",
+                "split": "right"
             },
-            "keys": "alt+shift+j"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": 
-            {
-                "action": "swapPane",
-                "direction": "left"
-            },
-            "keys": "alt+shift+h"
+            "keys": "alt+shift+v"
         },
         {
             "command": 
@@ -34,14 +22,42 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "right"
+                "action": "swapPane",
+                "direction": "left"
             },
-            "keys": "alt+shift+v"
+            "keys": "alt+shift+h"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "down"
+            },
+            "keys": "alt+shift+j"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+shift+4"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+l"
+        },
+        {
+            "command": "closePane",
+            "keys": "alt+q"
         },
         {
             "command": "unbound",
@@ -64,24 +80,19 @@
             "keys": "alt+f4"
         },
         {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "alt+shift+4"
+            "command": "unbound",
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "alt+l"
-        },
-        {
-            "command": "closePane",
-            "keys": "alt+q"
+                "action": "newTab",
+                "index": 1
+            }
         },
         {
             "command": 
@@ -126,6 +137,14 @@
         {
             "command": 
             {
+                "action": "newTab",
+                "index": 0
+            },
+            "keys": "alt+shift+enter"
+        },
+        {
+            "command": 
+            {
                 "action": "moveFocus",
                 "direction": "left"
             },
@@ -154,36 +173,51 @@
         {
             "command": "closeWindow",
             "keys": "alt+shift+q"
+        },
+        {
+            "command": 
+            {
+                "action": "movePane",
+                "index": 1
+            },
+            "keys": "alt+1"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{00000000-0000-0000-0000-000000000000}",
+    "experimental.rendering.forceFullRepaint": false,
+    "experimental.rendering.software": false,
     "profiles": 
     {
         "defaults": 
         {
             "backgroundImage": "desktopWallpaper",
-            "backgroundImageOpacity": 0.11,
-            "colorScheme": "One Half Dark",
+            "backgroundImageOpacity": 0.0,
+            "colorScheme": "Monokai Seti Dark",
             "experimental.retroTerminalEffect": false,
             "font": 
             {
                 "face": "Courier New",
                 "weight": "medium"
             },
-            "opacity": 89,
+            "opacity": 100,
             "padding": "16",
             "startingDirectory": "C:\\Users\\MFedurko",
-            "useAcrylic": true
+            "useAcrylic": false
         },
         "list": 
         [
             {
-                "backgroundImageOpacity": 0.10000000000000001,
+                "backgroundImageOpacity": 0.0,
                 "bellStyle": "none",
+                "colorScheme": "Monokai Seti Dark",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "elevate": true,
+                "font": 
+                {
+                    "size": 10
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
@@ -202,18 +236,6 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{6686cbcf-5dec-58fe-8ffe-c5a325fe5fe2}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{5d7fedc9-b890-5679-8ed7-bd8e9ab541c0}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
                 "guid": "{ebb6ee35-eac9-5dd2-bf47-65ab9134ec2a}",
                 "hidden": true,
                 "name": "Developer Command Prompt for VS 2019",
@@ -224,6 +246,32 @@
                 "hidden": true,
                 "name": "Developer PowerShell for VS 2019",
                 "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "closeOnExit": "graceful",
+                "commandline": "C:/msys64/home/MFedurko/.msys2.cmd -msys2",
+                "cursorColor": "#FD9D4F",
+                "cursorShape": "filledBox",
+                "guid": "{00000000-0000-0000-0000-000000000000}",
+                "historySize": 9001,
+                "icon": "C:\\msys64\\msys2.ico",
+                "name": "MSYS2",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "startingDirectory": "C:/msys64/home/MFedurko",
+                "useAcrylic": false
             }
         ]
     },
@@ -274,6 +322,52 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#000000",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#13A10E",
+            "name": "Color Scheme 10",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#151718",
+            "black": "#151718",
+            "blue": "#9D65FF",
+            "brightBlack": "#625E4C",
+            "brightBlue": "#9D65FF",
+            "brightCyan": "#58D1EB",
+            "brightGreen": "#98F424",
+            "brightPurple": "#F4005F",
+            "brightRed": "#F4005F",
+            "brightWhite": "#F6F6EF",
+            "brightYellow": "#FA8419",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#58D1EB",
+            "foreground": "#F8F8F2",
+            "green": "#98F424",
+            "name": "Monokai Seti Dark",
+            "purple": "#F4005F",
+            "red": "#F4005F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#F8F8F2",
+            "yellow": "#FA8419"
         },
         {
             "background": "#282C34",
@@ -414,6 +508,29 @@
             "yellow": "#C4A000"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -435,6 +552,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#C0C0C0",
             "yellow": "#808000"
+        },
+        {
+            "background": "#332A57",
+            "black": "#000000",
+            "blue": "#00BFFF",
+            "brightBlack": "#000000",
+            "brightBlue": "#1BCCFD",
+            "brightCyan": "#99D6FC",
+            "brightGreen": "#21F6BC",
+            "brightPurple": "#E6AEFE",
+            "brightRed": "#FF8AA4",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFF787",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#86CBFE",
+            "foreground": "#E5E5E5",
+            "green": "#00FBAC",
+            "name": "cyberpunk",
+            "purple": "#DF95FF",
+            "red": "#FF7092",
+            "selectionBackground": "#FFFFFF",
+            "white": "#FFFFFF",
+            "yellow": "#FFFA6A"
         }
     ],
     "theme": "dark"
