@@ -8,31 +8,13 @@
 # System shortcuts
 ##################################################
 
-alias op="xdg-open"
-alias temp="cat /sys/class/thermal/thermal_zone*/temp"
-alias batt="cat /sys/class/power_supply/BAT0/capacity"
-
-brigh () {
-  cur=$(cat /sys/class/backlight/intel_backlight/brightness)
-  max=$(cat /sys/class/backlight/intel_backlight/max_brightness)
-  if [ "$#" -eq 0 ]; then
-    res=$(echo "($cur / $max) * 100" | bc -l)
-    echo $res | awk '{print int($1)}'
-  else
-    res=$(echo "($max / 100) * $1" | bc -l | awk '{print int($1)}')
-    sudo sh -c "echo $res > /sys/class/backlight/intel_backlight/brightness"
-  fi
-}
-
-function setzoom() { 
-	gsettings set org.gnome.desktop.interface text-scaling-factor "$@"; 
-}
+alias op="open"
 
 ##################################################
 # Commodities
 ##################################################
  
- killp () {
+killp () {
   if [ -z $1 ]; then
     printf "Pass it the name of process to kill\n"
     return 1
@@ -77,4 +59,4 @@ alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # to enable vim mode
 set -o vi
 
-export PATH="/home/b1z0n/.local/bin:$PATH"
+export PATH="/Users/b1z0n/.local/bin:$PATH"
