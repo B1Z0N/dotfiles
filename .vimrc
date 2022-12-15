@@ -23,4 +23,5 @@ nnoremap k gk
 " colors
 highlight Pmenu ctermbg=gray guibg=gray
 syntax on 
-colorscheme desert
+colorscheme gruvbox
+set bg=dark

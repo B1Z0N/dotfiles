@@ -53,6 +53,11 @@ zs() {
         clear && z $1 && ls
     fi
 }
+
+code() {
+   open -a Visual\ Studio\ Code.app $1
+}
+
 # to backup configuration dotfiles
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 

@@ -108,3 +108,5 @@ source ~/.common.sh
 
 alias grep="echo 'Use ripgrep instead!'"
 alias find="echo 'Use fzf instead!'"
+
+eval $(/opt/homebrew/bin/brew shellenv)
