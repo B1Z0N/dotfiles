@@ -14,6 +14,10 @@ alias op="open"
 # Commodities
 ##################################################
  
+between () { 
+  cat | head -n "$2" | tail -n $(bc <<< "$2-$1+1")
+}
+
 killp () {
   if [ -z $1 ]; then
     printf "Pass it the name of process to kill\n"

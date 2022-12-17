@@ -4,7 +4,7 @@ set tabstop=2
 set expandtab
 
 " useful things
-set number
+set number relativenumber
 set showcmd
 set cursorline
 set wildmenu
