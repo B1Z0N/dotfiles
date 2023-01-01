@@ -58,6 +58,10 @@ zs() {
     fi
 }
 
+gs() {
+  clear && git status
+}
+
 code() {
    open -a Visual\ Studio\ Code.app $1
 }

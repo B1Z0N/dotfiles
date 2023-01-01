@@ -25,3 +25,7 @@ highlight Pmenu ctermbg=gray guibg=gray
 syntax on 
 colorscheme gruvbox
 set bg=dark
+
+" clipboard 
+"set viminfo+=<2000 " size
+set clipboard=unnamed " macos clipboard+vim
