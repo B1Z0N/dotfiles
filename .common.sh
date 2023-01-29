@@ -14,6 +14,10 @@ alias op="open"
 # Commodities
 ##################################################
  
+notify () {
+  osascript -e "display notification \"$1\""
+}
+
 between () { 
   cat | head -n "$2" | tail -n $(bc <<< "$2-$1+1")
 }
