@@ -108,5 +108,6 @@ source ~/.common.sh
 
 alias grep="echo 'Use ripgrep instead!'"
 alias find="echo 'Use fzf instead!'"
+alias vim="echo 'Use nvim instead!'"
 
 eval $(/opt/homebrew/bin/brew shellenv)

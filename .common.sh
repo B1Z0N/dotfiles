@@ -28,14 +28,14 @@ killp () {
     return 1
   fi
 
-  cnt=$(ps -aux | grep "$1" | wc -l)
+  cnt=$(ps -aux | rg "$1" | wc -l)
   if [ $cnt -eq 1 ]; then 
     printf "Already dead\n"
     return 0
   fi
 
-  pid=$(ps -aux | grep "$1" | awk 'NR==1{print $2}')
-  name=$(ps -aux | grep "$1" | awk 'NR==1{print $11}')
+  pid=$(ps -aux | rg "$1" | awk 'NR==1{print $2}')
+  name=$(ps -aux | rg "$1" | awk 'NR==1{print $11}')
 
   printf "%s\nY or n: " "$name"
   read is_kill
