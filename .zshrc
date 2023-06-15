@@ -11,7 +11,8 @@ export ZSH="/Users/b1z0n/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="sorin"
+# ZSH_THEME="sorin"
+ZSH_THEME="minimal"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,8 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # shortcuts for simple terminal system management
 source ~/.common.sh
 
-alias grep="echo 'Use ripgrep instead!'"
-alias find="echo 'Use fzf instead!'"
-alias vim="echo 'Use nvim instead!'"
+alias grep="echo 'Use ripgrep instead!' #"
+alias find="echo 'Use fzf instead!' #"
+alias vim="echo 'Use nvim instead!' #"
 
 eval $(/opt/homebrew/bin/brew shellenv)
